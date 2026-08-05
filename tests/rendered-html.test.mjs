@@ -33,6 +33,8 @@ test("server-renders Peng Chen's academic profile", async () => {
   assert.match(html, /My research examines interactions among built environments/);
   assert.match(html, /Equitable environmental and climate adaptation planning/);
   assert.match(html, /Networks of Plans/);
+  assert.match(html, /Planning dimensions/);
+  assert.match(html, /Implementation and Monitoring/);
   assert.match(html, /Connecting urban environments, climate, and health/);
   assert.doesNotMatch(html, /codex-preview|Building your site|react-loading-skeleton/i);
 });
