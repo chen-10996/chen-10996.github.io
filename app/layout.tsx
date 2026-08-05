@@ -1,48 +1,40 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "127.0.0.1:5173";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.startsWith("127.0.0.1") || host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
-  const title = "Peng Chen | Urban Environmental Scholar";
-  const description =
-    "Research on interactions among built environments, climate-related exposures, public health, and equitable environmental and climate adaptation.";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://peng-chen-profile.langdonc18201903582.chatgpt.site";
+const title = "Peng Chen | Urban Environmental Scholar";
+const description =
+  "Research on interactions among built environments, climate-related exposures, public health, and equitable environmental and climate adaptation.";
 
-  return {
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  icons: {
+    icon: "/media/peng-chen-portrait-color.jpg",
+  },
+  openGraph: {
     title,
     description,
-    icons: {
-      icon: "/media/peng-chen-portrait-color.jpg",
-    },
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      images: [
-        {
-          url: `${origin}/og.png`,
-          width: 1200,
-          height: 630,
-          alt: "Peng Chen - Urban environments, climate adaptation, environmental health, and environmental justice",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${origin}/og.png`],
-    },
-  };
-}
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Peng Chen - Urban environments, climate adaptation, environmental health, and environmental justice",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.png"],
+  },
+};
 
 export default function RootLayout({
   children,
