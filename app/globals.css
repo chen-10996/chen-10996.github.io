@@ -240,12 +240,6 @@ nav a:focus-visible::after,
   line-height: 1.05;
 }
 
-.hero h1 .hero-name-chinese {
-  font-family: "Songti SC", STSong, SimSun, var(--serif);
-  font-size: 0.82em;
-  letter-spacing: 0;
-}
-
 .hero-statement {
   max-width: 850px;
   margin: 22px 0 0;
@@ -864,15 +858,21 @@ nav a:focus-visible::after,
   font-size: 18px;
 }
 
-.contact-email {
+.contact-actions {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 52px);
   margin-top: 42px;
+}
+
+.contact-actions a {
+  display: inline-block;
   padding-bottom: 7px;
   border-bottom: 2px solid currentColor;
   font-family: var(--serif);
-  font-size: clamp(20px, 2.5vw, 36px);
+  font-size: clamp(20px, 2.2vw, 32px);
 }
 
 footer {
@@ -1006,10 +1006,6 @@ footer > span:last-child {
     font-size: 25px;
   }
 
-  .hero h1 .hero-name-chinese {
-    font-size: 0.82em;
-  }
-
   .hero-statement {
     font-size: 25px;
   }
@@ -1102,7 +1098,7 @@ footer > span:last-child {
     font-size: 46px;
   }
 
-  .contact-email {
+  .contact-actions a {
     font-size: 20px;
   }
 

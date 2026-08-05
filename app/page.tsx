@@ -115,10 +115,7 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Urban Environments · Climate Adaptation · Environmental Health · Environmental Justice</p>
-            <h1 id="hero-title">
-              <span>Peng Chen</span>
-              <span className="hero-name-chinese" lang="zh-Hans">陈鹏</span>
-            </h1>
+            <h1 id="hero-title">Peng Chen</h1>
             <p className="hero-statement">
               My research examines interactions among built environments, climate-related
               exposures, and public health, with a focus on equitable environmental and
@@ -128,9 +125,6 @@ export default function Home() {
               <a className="button button-primary" href="#research">
                 Explore my research <span aria-hidden="true">↘</span>
               </a>
-              <a className="button button-secondary" href="mailto:chen.10996@osu.edu">
-                Email
-              </a>
               <a
                 className="button button-secondary"
                 href="https://scholar.google.com/citations?user=HJxjmusAAAAJ&hl=en"
@@ -138,14 +132,6 @@ export default function Home() {
                 rel="noreferrer"
               >
                 Google Scholar <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                className="button button-secondary"
-                href="https://www.linkedin.com/in/chen-10996-osu"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn <span aria-hidden="true">↗</span>
               </a>
             </div>
             <div className="hero-meta" aria-label="Current academic information">
@@ -402,9 +388,18 @@ export default function Home() {
             I welcome conversations about research collaboration, teaching, and environmental
             and climate adaptation planning.
           </p>
-          <a className="contact-email" href="mailto:chen.10996@osu.edu">
-            chen.10996@osu.edu <span aria-hidden="true">↗</span>
-          </a>
+          <div className="contact-actions">
+            <a href="mailto:chen.10996@osu.edu">
+              Email <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/chen-10996-osu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </section>
       </main>
 
