@@ -106,7 +106,7 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </div>
         </details>
-        <a className="header-cv" href="/Peng-Chen-CV.docx" download>
+        <a className="header-cv" href="/Peng-Chen-CV.pdf" download>
           CV <span aria-hidden="true">↓</span>
         </a>
       </header>
@@ -115,7 +115,10 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">Urban Environments · Climate Adaptation · Environmental Health · Environmental Justice</p>
-            <h1 id="hero-title">Peng Chen</h1>
+            <h1 id="hero-title">
+              <span>Peng Chen</span>
+              <span className="hero-name-chinese" lang="zh-Hans">陈鹏</span>
+            </h1>
             <p className="hero-statement">
               My research examines interactions among built environments, climate-related
               exposures, and public health, with a focus on equitable environmental and
@@ -201,6 +204,12 @@ export default function Home() {
             <article className="feature feature-wide">
               <div className="feature-visual-stack">
                 <figure className="heat-city-figure">
+                  <div className="heat-city-frame">
+                    <img
+                      src="/media/heat-plan-cities.png"
+                      alt="Overall and equity-specific heat adaptation plan quality scores across 30 U.S. cities"
+                    />
+                  </div>
                   <div className="plan-dimension-key">
                     <p>Planning dimensions</p>
                     <ul>
@@ -211,12 +220,6 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="heat-city-frame">
-                    <img
-                      src="/media/heat-plan-cities.png"
-                      alt="Overall and equity-specific heat adaptation plan quality scores across 30 U.S. cities"
-                    />
                   </div>
                   <figcaption>Plan quality and equity scores vary substantially across cities.</figcaption>
                 </figure>
@@ -291,7 +294,7 @@ export default function Home() {
               <p className="section-label">Publications</p>
               <h2 id="publications-title">Selected writing</h2>
             </div>
-            <a className="text-link" href="/Peng-Chen-CV.docx" download>
+            <a className="text-link" href="/Peng-Chen-CV.pdf" download>
               Full CV <span aria-hidden="true">↓</span>
             </a>
           </div>
@@ -396,7 +399,7 @@ export default function Home() {
         </div>
         <div className="footer-links">
           <a href="#top">Back to top ↑</a>
-          <a href="/Peng-Chen-CV.docx" download>Download CV</a>
+          <a href="/Peng-Chen-CV.pdf" download>Download CV</a>
         </div>
         <span>© 2026 Peng Chen</span>
       </footer>

@@ -31,6 +31,9 @@ test("server-renders Peng Chen's academic profile", async () => {
   const html = await response.text();
   assert.match(html, /<title>Peng Chen \| Urban Environmental Scholar<\/title>/i);
   assert.match(html, /My research examines interactions among built environments/);
+  assert.match(html, /陈鹏/);
+  assert.match(html, /Peng-Chen-CV\.pdf/);
+  assert.doesNotMatch(html, /Peng-Chen-CV\.docx/);
   assert.match(html, /Equitable environmental and climate adaptation planning/);
   assert.match(html, /Networks of Plans/);
   assert.match(html, /Planning dimensions/);
