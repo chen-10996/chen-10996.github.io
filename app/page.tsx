@@ -129,7 +129,23 @@ export default function Home() {
                 Explore my research <span aria-hidden="true">↘</span>
               </a>
               <a className="button button-secondary" href="mailto:chen.10996@osu.edu">
-                Get in touch
+                Email
+              </a>
+              <a
+                className="button button-secondary"
+                href="https://scholar.google.com/citations?user=HJxjmusAAAAJ&hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Scholar <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className="button button-secondary"
+                href="https://www.linkedin.com/in/chen-10996-osu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
               </a>
             </div>
             <div className="hero-meta" aria-label="Current academic information">

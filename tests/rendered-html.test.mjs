@@ -34,6 +34,9 @@ test("server-renders Peng Chen's academic profile", async () => {
   assert.match(html, /陈鹏/);
   assert.match(html, /Peng-Chen-CV\.pdf/);
   assert.doesNotMatch(html, /Peng-Chen-CV\.docx/);
+  assert.match(html, /Google Scholar/);
+  assert.match(html, /scholar\.google\.com\/citations\?user=HJxjmusAAAAJ/);
+  assert.match(html, /linkedin\.com\/in\/chen-10996-osu/);
   assert.match(html, /Equitable environmental and climate adaptation planning/);
   assert.match(html, /Networks of Plans/);
   assert.match(html, /Planning dimensions/);

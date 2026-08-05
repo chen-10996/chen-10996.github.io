@@ -234,15 +234,15 @@ nav a:focus-visible::after,
   gap: clamp(14px, 2vw, 30px);
   margin: 26px 0 18px;
   font-family: var(--serif);
-  font-size: clamp(64px, 7vw, 112px);
+  font-size: clamp(25px, 2.5vw, 42px);
   font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 0.82;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
 }
 
 .hero h1 .hero-name-chinese {
   font-family: "Songti SC", STSong, SimSun, var(--serif);
-  font-size: clamp(24px, 2.4vw, 38px);
+  font-size: 0.82em;
   letter-spacing: 0;
 }
 
@@ -915,10 +915,6 @@ footer > span:last-child {
     padding-inline: 42px;
   }
 
-  .hero h1 {
-    font-size: clamp(67px, 10vw, 106px);
-  }
-
   .hero-statement {
     font-size: 27px;
   }
@@ -1007,11 +1003,11 @@ footer > span:last-child {
   }
 
   .hero h1 {
-    font-size: 62px;
+    font-size: 25px;
   }
 
   .hero h1 .hero-name-chinese {
-    font-size: 22px;
+    font-size: 0.82em;
   }
 
   .hero-statement {
