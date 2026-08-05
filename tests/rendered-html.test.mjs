@@ -35,6 +35,7 @@ test("server-renders Peng Chen's academic profile", async () => {
   assert.match(html, /Networks of Plans/);
   assert.match(html, /Planning dimensions/);
   assert.match(html, /Implementation and Monitoring/);
+  assert.doesNotMatch(html, /heat-plan-types\.png/);
   assert.match(html, /Connecting urban environments, climate, and health/);
   assert.doesNotMatch(html, /codex-preview|Building your site|react-loading-skeleton/i);
 });

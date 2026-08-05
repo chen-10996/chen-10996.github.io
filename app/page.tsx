@@ -200,27 +200,18 @@ export default function Home() {
           <div className="feature-grid">
             <article className="feature feature-wide">
               <div className="feature-visual-stack">
-                <figure className="heat-type-figure">
-                  <div className="heat-type-layout">
-                    <img
-                      src="/media/heat-plan-types.png"
-                      alt="Radar charts comparing overall and equity-specific heat adaptation scores across seven municipal plan types"
-                    />
-                    <div className="plan-dimension-key">
-                      <p>Planning dimensions</p>
-                      <ul>
-                        {planDimensions.map(([letter, label]) => (
-                          <li key={letter}>
-                            <strong>{letter}</strong>
-                            <span>{label}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <figcaption>Heat plans score highest, while equity remains limited across plan types.</figcaption>
-                </figure>
                 <figure className="heat-city-figure">
+                  <div className="plan-dimension-key">
+                    <p>Planning dimensions</p>
+                    <ul>
+                      {planDimensions.map(([letter, label]) => (
+                        <li key={letter}>
+                          <strong>{letter}</strong>
+                          <span>{label}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div className="heat-city-frame">
                     <img
                       src="/media/heat-plan-cities.png"
