@@ -12,9 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("127.0.0.1") || host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Peng Chen | Urban Environmental Planning";
+  const title = "Peng Chen | Urban Environmental Scholar";
   const description =
-    "Research on built environments, climate exposure, public health, and equitable urban adaptation.";
+    "Research on interactions among built environments, climate-related exposures, public health, and equitable environmental and climate adaptation.";
 
   return {
     title,
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: `${origin}/og.png`,
           width: 1200,
           height: 630,
-          alt: "Peng Chen - Urban environmental planning, climate, health, and equity",
+          alt: "Peng Chen - Urban environments, climate adaptation, environmental health, and environmental justice",
         },
       ],
     },

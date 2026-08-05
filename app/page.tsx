@@ -2,20 +2,20 @@ const themes = [
   {
     number: "01",
     title: "Built environments and climate exposure",
-    text: "How urban form, land cover, and green infrastructure shape exposure to heat, air pollution, noise, and other environmental stressors.",
-    tags: ["Urban heat", "Green infrastructure", "Spatial patterns"],
+    text: "How the spatial and physical characteristics of built environments are associated with exposure to climate hazards and environmental stressors—and how these relationships vary across places and populations.",
+    tags: ["Climate exposure", "Urban green space", "Spatial characteristics"],
   },
   {
     number: "02",
-    title: "Environmental pathways to health",
-    text: "How climate-related exposures interact with built-environment features to influence respiratory and mental health across racialized communities.",
-    tags: ["Environmental health", "Asthma", "Mental distress"],
+    title: "Environmental exposure and public health",
+    text: "How built-environment conditions and climate-related exposures are associated with physical and mental health, including variation across sociodemographic groups.",
+    tags: ["Environmental health", "Climate and health", "Health equity"],
   },
   {
     number: "03",
-    title: "Equitable climate adaptation",
-    text: "How plans, investments, and public processes can reduce unequal climate burdens and expand access to protection and adaptation resources.",
-    tags: ["Climate justice", "Plan evaluation", "Public participation"],
+    title: "Equitable environmental and climate adaptation planning",
+    text: "How urban environmental planning can make protection from climate hazards and access to adaptation resources more equitable across sociodemographic groups.",
+    tags: ["Environmental justice", "Climate adaptation", "Planning equity"],
   },
 ];
 
@@ -81,12 +81,21 @@ export default function Home() {
           <span className="wordmark-mark">PC</span>
           <span className="wordmark-name">Peng Chen</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
+        <details className="mobile-nav">
+          <summary aria-label="Open navigation menu">Menu</summary>
+          <div>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </details>
         <a className="header-cv" href="/Peng-Chen-CV.docx" download>
           CV <span aria-hidden="true">↓</span>
         </a>
@@ -95,12 +104,12 @@ export default function Home() {
       <main>
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Urban environmental planning · Climate · Health · Equity</p>
+            <p className="eyebrow">Urban Environments · Climate Adaptation · Environmental Health · Environmental Justice</p>
             <h1 id="hero-title">Peng Chen</h1>
             <p className="hero-statement">
-              I study how the built environment shapes climate-related exposures and public
-              health - and how planning can distribute protection and adaptation resources
-              more equitably.
+              My research examines interactions among built environments, climate-related
+              exposures, and public health, with a focus on equitable environmental and
+              climate adaptation.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#research">
@@ -121,6 +130,11 @@ export default function Home() {
                 <strong>City & Regional Planning</strong>
                 <span>The Ohio State University</span>
               </div>
+              <div>
+                <span className="meta-label">M.E. 2021 · B.E. 2018</span>
+                <strong>Landscape Architecture</strong>
+                <span>Tongji University</span>
+              </div>
             </div>
           </div>
 
@@ -130,7 +144,7 @@ export default function Home() {
               alt="Peng Chen standing in a library at Knowlton Hall"
             />
             <figcaption>
-              <span>Planning for healthier, more climate-resilient cities.</span>
+              <span>Planning for more resilient, sustainable, and inclusive urban futures.</span>
               <span className="portrait-index">01 / 03</span>
             </figcaption>
           </figure>
@@ -141,22 +155,7 @@ export default function Home() {
             <p className="section-label">Research agenda</p>
             <div>
               <h2 id="research-title">From exposure to action.</h2>
-              <p>
-                My work follows a connected urban system: the places we build shape
-                environmental exposure; exposure shapes health; and planning determines who
-                receives protection.
-              </p>
             </div>
-          </div>
-
-          <div className="research-flow" aria-hidden="true">
-            <span>Built environment</span>
-            <i>→</i>
-            <span>Climate exposure</span>
-            <i>→</i>
-            <span>Public health</span>
-            <i>→</i>
-            <span>Equitable planning</span>
           </div>
 
           <div className="theme-grid">
@@ -182,28 +181,43 @@ export default function Home() {
               <h2 id="featured-title">Research in view</h2>
             </div>
             <p>
-              Spatial evidence, systems models, and plan evaluation reveal where climate
-              adaptation works - and who it may leave behind.
+              Through geospatial analysis, spatial modeling, and plan evaluation, these
+              studies examine variation in environmental exposure, health, and adaptation
+              planning across places and populations.
             </p>
           </div>
 
           <div className="feature-grid">
             <article className="feature feature-wide">
-              <figure>
-                <img
-                  src="/media/heat-plan-types.png"
-                  alt="Radar charts comparing overall and equity-specific heat adaptation scores across seven municipal plan types"
-                />
-              </figure>
+              <div className="feature-visual-stack">
+                <figure className="heat-city-figure">
+                  <div className="heat-city-frame">
+                    <img
+                      src="/media/heat-plan-cities.png"
+                      alt="Overall and equity-specific heat adaptation plan quality scores across 30 U.S. cities"
+                    />
+                  </div>
+                  <figcaption>Plan quality and equity scores vary substantially across cities.</figcaption>
+                </figure>
+                <figure className="heat-type-figure">
+                  <img
+                    src="/media/heat-plan-types.png"
+                    alt="Radar charts comparing overall and equity-specific heat adaptation scores across seven municipal plan types"
+                  />
+                  <figcaption>Heat plans score highest, while equity remains limited across plan types.</figcaption>
+                </figure>
+              </div>
               <div className="feature-copy">
-                <span className="feature-kicker">Planning systems · 2026</span>
+                <span className="feature-kicker">Networks of Plans · 2026</span>
                 <h3>Equity remains peripheral in municipal heat planning.</h3>
                 <p>
-                  Across 199 plans in 30 U.S. cities, equity was especially limited in goal
-                  setting, public participation, and uncertainty management.
+                  Across 199 plans in 30 U.S. cities, the study finds that equity is rarely
+                  integrated systematically into heat adaptation, particularly in goals,
+                  public participation, and uncertainty management. The quality of heat
+                  adaptation and equity integration also varies substantially across cities.
                 </p>
                 <a href="https://doi.org/10.1080/01944363.2026.2695381" target="_blank" rel="noreferrer">
-                  Read the study <span aria-hidden="true">↗</span>
+                  Read full article <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>
@@ -211,19 +225,22 @@ export default function Home() {
             <article className="feature">
               <figure>
                 <img
-                  src="/media/asthma-pathways.png"
-                  alt="Path model linking built environment, temperature, air pollution, and adult asthma emergency department visits"
+                  src="/media/mental-distress-effects.png"
+                  alt="Non-linear associations between urban green space, environmental stressors, and adult frequent mental distress by racial group"
                 />
               </figure>
               <div className="feature-copy">
-                <span className="feature-kicker">Respiratory health · 2025</span>
-                <h3>Not all green space follows the same health pathway.</h3>
+                <span className="feature-kicker">UGS & Mental Health · 2026</span>
+                <h3>Non-linear relationships reveal where—and for whom—urban greening may matter most.</h3>
                 <p>
-                  Trees and water were associated with fewer asthma emergency visits, while
-                  grass followed different patterns across racialized neighborhoods.
+                  Using non-linear spatial models and simulated greening scenarios, the study
+                  shows that estimated environmental and mental-health outcomes vary by
+                  green-space type, intervention scale, and racial context. Tree-canopy
+                  expansion was associated with lower frequent mental distress in communities
+                  of color; grass conversion was not.
                 </p>
-                <a href="https://doi.org/10.1016/j.landurbplan.2025.105320" target="_blank" rel="noreferrer">
-                  Read the study <span aria-hidden="true">↗</span>
+                <a href="https://doi.org/10.1016/j.landurbplan.2026.105598" target="_blank" rel="noreferrer">
+                  Read full article <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>
@@ -231,19 +248,19 @@ export default function Home() {
             <article className="feature feature-accent">
               <figure>
                 <img
-                  src="/media/mental-distress-effects.png"
-                  alt="Non-linear associations between urban green space, environmental stressors, and adult frequent mental distress by racial group"
+                  src="/media/asthma-pathways.png"
+                  alt="Path model linking built environment, temperature, air pollution, and adult asthma emergency department visits"
                 />
               </figure>
               <div className="feature-copy">
-                <span className="feature-kicker">Mental health · 2026</span>
-                <h3>Greening benefits are non-linear and unevenly distributed.</h3>
+                <span className="feature-kicker">UGS & Respiratory Health · 2025</span>
+                <h3>Different types of urban green space follow different respiratory-health pathways.</h3>
                 <p>
-                  Tree canopy showed stronger mental-health benefits in communities of color,
-                  challenging universal, one-size-fits-all greening strategies.
+                  Trees and water were associated with fewer asthma emergency visits, while
+                  grass followed different patterns across racialized neighborhoods.
                 </p>
-                <a href="https://doi.org/10.1016/j.landurbplan.2026.105598" target="_blank" rel="noreferrer">
-                  Read the study <span aria-hidden="true">↗</span>
+                <a href="https://doi.org/10.1016/j.landurbplan.2025.105320" target="_blank" rel="noreferrer">
+                  Read full article <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>
@@ -308,37 +325,38 @@ export default function Home() {
 
           <div className="about-copy">
             <p className="section-label">About</p>
-            <h2 id="about-title">Planning cities that protect everyone.</h2>
+            <h2 id="about-title">Connecting urban environments, climate, and health.</h2>
             <p className="about-lead">
-              Peng Chen is an urban environmental planning scholar and incoming Wilkes
-              Postdoctoral Fellow at the University of Utah. He earned his Ph.D. in City and
-              Regional Planning from The Ohio State University.
+              Peng Chen is an urban environmental scholar and incoming Wilkes Postdoctoral
+              Fellow at the University of Utah. He earned a Ph.D. in City and Regional
+              Planning from The Ohio State University and M.E. and B.E. degrees in Landscape
+              Architecture from Tongji University.
             </p>
             <p>
-              His research examines how urban form and green infrastructure shape exposure to
-              extreme heat, air pollution, and noise; how these environmental pathways affect
-              respiratory and mental health; and how plans and investments can better serve
-              communities historically burdened by climate hazards.
+              His research examines interactions among built environments, climate-related
+              exposures, and public health. He also studies how urban environmental planning
+              can make protection from climate hazards and access to adaptation resources more
+              equitable across sociodemographic groups.
             </p>
             <p>
-              Combining geospatial analysis, spatial statistics, machine learning, plan
-              evaluation, surveys, and qualitative methods, Chen translates complex
-              relationships among place, climate, and health into practical strategies for
-              equitable adaptation.
+              Drawing on geospatial data science, statistical and spatial modeling, plan
+              evaluation, surveys, and interviews, Chen connects environmental evidence with
+              planning practice to support more resilient, sustainable, and inclusive urban
+              futures.
             </p>
 
             <div className="about-facts">
               <div>
                 <span>Methods</span>
-                <p>Geospatial analysis · Spatial statistics · Machine learning · Mixed methods</p>
+                <p>Geospatial data science · Statistical and spatial modeling · Plan evaluation and content analysis · Survey research · Interviews</p>
               </div>
               <div>
                 <span>Teaching</span>
-                <p>Site planning · Digital design and analysis · Plan-making studios</p>
+                <p>Site Planning and Development · Digital Design and Analysis · Plan Making Studio · City History and Law · Principles of Landscape Planning and Design · Principles of Landscape Planning</p>
               </div>
               <div>
                 <span>Recognition</span>
-                <p>Wilkes Postdoctoral Fellowship · OSU Presidential Fellowship · Best Dissertation</p>
+                <p>Wilkes Postdoctoral Fellowship · OSU Presidential Fellowship · Patricia Burgess Award for Best Dissertation</p>
               </div>
             </div>
           </div>
@@ -346,10 +364,10 @@ export default function Home() {
 
         <section className="contact" id="contact" aria-labelledby="contact-title">
           <p className="section-label">Contact</p>
-          <h2 id="contact-title">Let&apos;s talk about climate, health, and cities.</h2>
+          <h2 id="contact-title">Let&apos;s talk about cities, climate, environment, and health.</h2>
           <p>
-            I welcome conversations about research collaboration, teaching, public scholarship,
-            and equitable climate adaptation.
+            I welcome conversations about research collaboration, teaching, and environmental
+            and climate adaptation planning.
           </p>
           <a className="contact-email" href="mailto:chen.10996@osu.edu">
             chen.10996@osu.edu <span aria-hidden="true">↗</span>
@@ -360,7 +378,7 @@ export default function Home() {
       <footer>
         <div>
           <strong>Peng Chen</strong>
-          <span>Urban environmental planning scholar</span>
+          <span>Urban environmental scholar</span>
         </div>
         <div className="footer-links">
           <a href="#top">Back to top ↑</a>
