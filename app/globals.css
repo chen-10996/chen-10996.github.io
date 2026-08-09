@@ -359,12 +359,6 @@ nav a:focus-visible::after,
   max-width: 260px;
 }
 
-.portrait-index {
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-}
-
 .research,
 .featured-work,
 .publications,

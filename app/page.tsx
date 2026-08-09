@@ -160,7 +160,6 @@ export default function Home() {
             />
             <figcaption>
               <span>Planning for more resilient, sustainable, and inclusive urban futures.</span>
-              <span className="portrait-index">01 / 03</span>
             </figcaption>
           </figure>
         </section>
@@ -249,7 +248,9 @@ export default function Home() {
                 />
               </figure>
               <div className="feature-copy">
-                <span className="feature-kicker">UGS & Mental Health · 2026</span>
+                <span className="feature-kicker">
+                  Environmental Exposure & Mental Health · 2026
+                </span>
                 <h3>Non-linear relationships reveal where—and for whom—urban greening may matter most.</h3>
                 <p>
                   Using non-linear spatial models and simulated greening scenarios, the study
@@ -272,7 +273,9 @@ export default function Home() {
                 />
               </figure>
               <div className="feature-copy">
-                <span className="feature-kicker">UGS & Respiratory Health · 2025</span>
+                <span className="feature-kicker">
+                  Environmental Exposure & Respiratory Health
+                </span>
                 <h3>Different types of urban green space follow different respiratory-health pathways.</h3>
                 <p>
                   Trees and water were associated with fewer asthma emergency visits, while
