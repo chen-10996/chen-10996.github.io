@@ -136,7 +136,7 @@ export default function Home() {
             </div>
             <div className="hero-meta" aria-label="Current academic information">
               <div>
-                <span className="meta-label">Beginning 2026</span>
+                <span className="meta-label">2026–Present</span>
                 <strong>Wilkes Postdoctoral Fellow</strong>
                 <span>University of Utah</span>
               </div>
@@ -349,8 +349,8 @@ export default function Home() {
             <p className="section-label">About</p>
             <h2 id="about-title">Connecting urban environments, climate, and health.</h2>
             <p className="about-lead">
-              Peng Chen is an urban environmental scholar and incoming Wilkes Postdoctoral
-              Fellow at the University of Utah. He earned a Ph.D. in City and Regional
+              Peng Chen is an urban environmental scholar and Wilkes Postdoctoral Fellow at
+              the University of Utah. He earned a Ph.D. in City and Regional
               Planning from The Ohio State University and M.E. and B.E. degrees in Landscape
               Architecture from Tongji University.
             </p>
